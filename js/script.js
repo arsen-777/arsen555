@@ -13,18 +13,25 @@ $(document).ready(function(){
         responsive: {
             250: {
                 items: 1,
-                nav: false
             },
             576: {
                 items: 2
             },
             768: {
-                items: 2
+                items: 3
             },
             1024: {
                 items: 3
             },
             1140: {
+                items: 4
+                
+            },
+            1280: {
+                items: 4
+                
+            },
+            1400: {
                 items: 4
                 
             },

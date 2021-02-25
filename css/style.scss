@@ -36,6 +36,16 @@ $mycolor : #555555;
         height: 2px;
         background:#555555;
     }
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 576px) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 14px;
+    }
 }
 
 
@@ -51,7 +61,6 @@ header {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center;
     background-attachment: fixed;
     min-height: 700px;
     
@@ -128,11 +137,33 @@ header {
                 font-size: 48px;
                 font-weight: 500;
                 color:#ffffff;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 40px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 30px;
+                }
+                @media screen and (max-width: 576px) {
+                    font-size: 25px;
+                }
             }
             p {
                 font-size:20px;
                 color:#ffff;
                 margin: 20px 0 50px 0;
+                @media screen and (max-width: 1024px) {
+                    font-size: 18px;
+                }
+                @media screen and (max-width: 786px) {
+                    font-size: 18px;
+                }
+                @media screen and (max-width: 576px) {
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 320px) {
+                    font-size: 14px;
+                }
 
             }
             button {
@@ -405,6 +436,18 @@ main {
 
 .latest_works_block {
     .latest_works {
+        .mobile_menu {
+            display: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                fill:$red;
+            }
+        }
 
         .menu {
             display: flex;
@@ -425,9 +468,21 @@ main {
                 font-weight: 400;
                 color:$mycolor;
 
+               
                 
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .mobile_menu {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+        }
+
+
             .works_image_block {
                  display: grid;
                  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
@@ -435,9 +490,9 @@ main {
                  margin:70px 0 100px 0;
 
                 .image_block {
-                    width: 360px;
-                    height: 320px;
-                    flex-basis:30%;
+                    // width: 360px;
+                    // height: 320px;
+                    // flex-basis:30%;
                     
                     
 
@@ -476,6 +531,12 @@ main {
                 font-family:$roboto;
                 font-weight: 400;
                 margin-top:100px;
+
+                @media screen and (max-width: 576px) {
+                   font-size:20px;
+                   margin-top: 50px;
+                }
+
             }
             button {
                 background: transparent;
@@ -495,6 +556,11 @@ main {
                     color:$red;
                     border:none;
                 }
+
+                @media screen and (max-width: 320px) {
+                    
+                    margin:20px 0 20px 0;
+                 }
             }
         }
     }
@@ -546,7 +612,10 @@ main {
                 }
                 .blog_info {
                     flex-basis: 55%;
-                               
+                              
+                    @media screen and (max-width: 1024px) {
+                        flex-basis: 48%;
+                    }
 
                     .month_block {
                         display: flex;
@@ -567,6 +636,10 @@ main {
                                 font-weight: 700;
                                 color:$mycolor;
                                 letter-spacing: 1px;
+                            }
+                            @media screen and (max-width: 576px) {
+                                width: 45px;
+                                height: 45px;
                             }
                         }
                         .ideas {
@@ -596,6 +669,38 @@ main {
                                     
                                     &::first-letter {
                                         text-transform: uppercase;
+                                    }
+                                }
+                                @media screen and (max-width: 1024px){
+                                    font-size: 12px;
+                                }
+                                @media screen and (max-width: 768px){
+                                    font-size: 12px;
+                                }
+                                @media screen and (max-width: 576px) {
+                                    font-size: 11px;
+                                   
+                                   
+                                    p {
+                                        font-size:10px;
+
+                                        span {
+                                            font-size: 10px;
+                                        }
+
+                                    }
+                                }
+                                @media screen and (max-width: 320px) {
+                                    font-size: 10px;
+                                   
+                                   
+                                    p {
+                                        font-size:8px;
+
+                                        span {
+                                            font-size: 8px;
+                                        }
+
                                     }
                                 }
                             }
@@ -628,6 +733,21 @@ main {
                             
                         }
                     }
+                    @media screen and (max-width: 1140px) {
+                        flex-basis: 48%;
+                        margin-top:10px;
+                    }
+                    @media screen and (max-width: 786px) {
+                        flex-basis: 48%;
+                        margin-top:10px;
+                    }
+                    @media screen and (max-width: 576px) {
+                        flex-basis: 100%;
+                        margin-top:10px;
+                        
+
+                      
+                    }
                 }
             }
         }
@@ -647,8 +767,22 @@ main {
                     margin: 100px 0 80px 0;
 
                     .brand {
+                        width: 140px;
+                        height: 70px;
                         img {
+                            display: block;
+                            width: 100%;
+                
+                        }
+                        @media screen and (max-width:768px) {
+                            flex-basis:35%;
+                            margin: 10px 0;
 
+                            
+                        }
+                        @media screen and (max-width:576px) {
+                            flex-basis:52%;
+                            margin: 15px 0;
                         }
                     }
                 }
@@ -668,6 +802,15 @@ main {
                             color:$mycolor;
                             text-align: center;
                             
+                            @media screen and (max-width:768px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (max-width:576px) {
+                                font-size: 14px;
+                            }
+                            @media screen and (max-width:320px) {
+                                font-size: 12px;
+                            }
                             } 
                         }
                         .swiper-pagination {
@@ -686,6 +829,16 @@ main {
                     color:$mycolor;
                     text-align: center;
                     margin-top: 45px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size:17px;
+                    }
+                    @media screen and (max-width: 576px) {
+                        font-size:16px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        font-size:15px;
+                    }
                 }
             }
         }
@@ -762,6 +915,21 @@ main {
                                 margin-top:10px;
                                 width: 684px;
                                 height: 100px;
+                                
+
+                                @media screen and (max-width: 768px) {
+                                    width: 400px;
+                                    height: 40px;
+                                }
+                                @media screen and (max-width: 576px) {
+                                    width: 200px;
+                                    height: 37px;
+                                    flex-basis: 50%;
+                                }
+                                @media screen and (max-width: 320px) {
+                                    width: 180px;
+                                    height: 37px;
+                                }
                             }
                             
                         }
@@ -788,8 +956,21 @@ main {
                                 font-weight: 400;
                                 color:$mycolor;
                                 padding-left: 35px;
-                                
-                                
+                                @media screen and (max-width: 768px) {
+                                    padding-left: unset;
+                                    display: block;
+                                    margin-top: 10px;
+                                 }
+                                @media screen and (max-width: 576px) {
+                                    padding-left: unset;
+                                    display: block;
+                                    margin-top: 10px;
+                                }
+                                @media screen and (max-width: 320px) {
+                                   padding-left: unset;
+                                   display: block;
+                                   margin-top: 10px;
+                                }
                             }
                     }
                 }
